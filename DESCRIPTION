@@ -1,8 +1,8 @@
 Package: TreeDetectR
-Title: What the Package Does (One Line, Title Case)
+Title: Detecting and segmenting individual urban trees from LiDAR point cloud 
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+    person("Fyeqa", "Akram", , "fyeqaakram30@gmail.com")
 Description: What the package does (one paragraph).
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
@@ -18,6 +18,4 @@ Imports:
     rgl,
     sf,
     terra
-Suggests: 
-    testthat (>= 3.0.0)
 Config/testthat/edition: 3
