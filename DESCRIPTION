@@ -2,10 +2,9 @@ Package: TreeDetectR
 Title: Detecting and segmenting individual urban trees from LiDAR point cloud 
 Version: 0.0.0.9000
 Authors@R: 
-    person("Fyeqa", "Akram", , "fyeqaakram30@gmail.com")
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Fyeqa", "Akram", , "fyeqaakram30@gmail.com", role = c("aut", "cre"))
+Description: Provides functions to classify ground points, generate canopy height models, detect tree tops, and segment individual trees from urban LiDAR point cloud data.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
