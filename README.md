@@ -25,32 +25,27 @@ Below is a workflow using TreeDetectR for urban tree detection and segmentation 
 ```r
 library(TreeDetectR)
 ```
-
-# Step 1: Read and prepare the LAS data
-# Reads a LAS file and assigns a CRS if missing.
-# Filters points based on height range (30m–80m) to exclude noise.
+In this steps, it read and prepare the LAS data and assigns a CRS if its missing and filters points based on height range (30m–80m) to exclude noise.
 
 ```r
 las <- read_and_prepare_las("path/to/your/file.las")
 ```
 
-# Step 2: Process the LiDAR data
-# Performs a full LiDAR processing pipeline:
-# - Classifies ground points
-# - Generates a Digital Terrain Model (DTM)
-# - Normalizes heights above ground
-# - Builds and smooths a Canopy Height Model (CHM)
-# - Detects individual tree tops
-# - Segments tree crowns
+Process the LiDAR data: Performs a full LiDAR processing pipeline:
+- Classifies ground points
+- Generates a Digital Terrain Model (DTM)
+- Normalizes heights above ground
+- Builds and smooths a Canopy Height Model (CHM)
+- Detects individual tree tops
+- Segments tree crowns
 
-# Set plot = TRUE to visualize each processing step.
+Set plot = TRUE to visualize each processing step.
 
 ```r
 result <- process_lidar(las, plot = TRUE)
 ```
 
-# Step 3: Export tree coordinates to CSV
-# Converts detected treetop coordinates to Latitude/Longitude and exports them along with elevation and tree ID to a CSV file.
+Converts detected treetop coordinates to Latitude/Longitude and exports them along with elevation and tree ID to a CSV file.
 
 ```r
 tree_coords_df <- export_tree_coords(result$treetops, result$chm, filename = "tree_coordinates.csv")
